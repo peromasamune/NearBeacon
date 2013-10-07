@@ -45,7 +45,7 @@
     self.locationManager.delegate = nil;
     
     [self stopAdvertising];
-    self.peripheralManager.delegate = self;
+    self.peripheralManager.delegate = nil;
 }
 
 -(void)initialize{
@@ -69,6 +69,7 @@
         self.isMonitoring = YES;
     }
     
+    // TODO : its couldn't check Advertising status in Application killed.
     if (self.peripheralManager.isAdvertising) {
         self.isAdvertising = YES;
     }
