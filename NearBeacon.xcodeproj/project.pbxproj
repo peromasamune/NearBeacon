@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F8344D5180296C800B542CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D4180296C800B542CF /* Foundation.framework */; };
+		9F8344D7180296C800B542CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D6180296C800B542CF /* CoreGraphics.framework */; };
+		9F8344D9180296C800B542CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D8180296C800B542CF /* UIKit.framework */; };
+		9F8344DF180296C800B542CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F8344DD180296C800B542CF /* InfoPlist.strings */; };
+		9F8344E1180296C800B542CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8344E0180296C800B542CF /* main.m */; };
+		9F8344E5180296C800B542CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8344E4180296C800B542CF /* AppDelegate.m */; };
+		9F8344F0180296C900B542CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8344EF180296C900B542CF /* Images.xcassets */; };
+		9F8344F7180296C900B542CF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344F6180296C900B542CF /* XCTest.framework */; };
+		9F8344F8180296C900B542CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D4180296C800B542CF /* Foundation.framework */; };
+		9F8344F9180296C900B542CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D8180296C800B542CF /* UIKit.framework */; };
+		9F834501180296C900B542CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F8344FF180296C900B542CF /* InfoPlist.strings */; };
+		9F834503180296C900B542CF /* NearBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F834502180296C900B542CF /* NearBeaconTests.m */; };
+		9F83450D180296F300B542CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F83450C180296F300B542CF /* CoreLocation.framework */; };
+		9F8345111802972500B542CF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8345101802972500B542CF /* MainViewController.m */; };
+		9F83451518029C5C00B542CF /* PMBeaconLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F83451418029C5C00B542CF /* PMBeaconLocationManager.m */; };
+		9F8345171802A4F900B542CF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8345161802A4F900B542CF /* CoreBluetooth.framework */; };
+		9F83451A1802A50C00B542CF /* LocalNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8345191802A50C00B542CF /* LocalNotificationManager.m */; };
+		9F8345451802A7EC00B542CF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F8345331802A7EC00B542CF /* SVProgressHUD.bundle */; };
+		9F8345461802A7EC00B542CF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8345351802A7EC00B542CF /* SVProgressHUD.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F8344FA180296C900B542CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F8344C9180296C800B542CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F8344D0180296C800B542CF;
+			remoteInfo = NearBeacon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F8344D1180296C800B542CF /* NearBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8344D4180296C800B542CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F8344D6180296C800B542CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9F8344D8180296C800B542CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9F8344DC180296C800B542CF /* NearBeacon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NearBeacon-Info.plist"; sourceTree = "<group>"; };
+		9F8344DE180296C800B542CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F8344E0180296C800B542CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F8344E2180296C800B542CF /* NearBeacon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NearBeacon-Prefix.pch"; sourceTree = "<group>"; };
+		9F8344E3180296C800B542CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F8344E4180296C800B542CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F8344EF180296C900B542CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F8344F5180296C900B542CF /* NearBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8344F6180296C900B542CF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9F8344FE180296C900B542CF /* NearBeaconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NearBeaconTests-Info.plist"; sourceTree = "<group>"; };
+		9F834500180296C900B542CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F834502180296C900B542CF /* NearBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearBeaconTests.m; sourceTree = "<group>"; };
+		9F83450C180296F300B542CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9F83450F1802972500B542CF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewControllers/MainViewController.h; sourceTree = "<group>"; };
+		9F8345101802972500B542CF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewControllers/MainViewController.m; sourceTree = "<group>"; };
+		9F83451318029C5C00B542CF /* PMBeaconLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMBeaconLocationManager.h; path = Manager/PMBeaconLocationManager.h; sourceTree = "<group>"; };
+		9F83451418029C5C00B542CF /* PMBeaconLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PMBeaconLocationManager.m; path = Manager/PMBeaconLocationManager.m; sourceTree = "<group>"; };
+		9F8345161802A4F900B542CF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9F8345181802A50C00B542CF /* LocalNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalNotificationManager.h; path = Manager/LocalNotificationManager.h; sourceTree = "<group>"; };
+		9F8345191802A50C00B542CF /* LocalNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalNotificationManager.m; path = Manager/LocalNotificationManager.m; sourceTree = "<group>"; };
+		9F8345321802A7EC00B542CF /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		9F8345331802A7EC00B542CF /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		9F8345341802A7EC00B542CF /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		9F8345351802A7EC00B542CF /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F8344CE180296C800B542CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8345171802A4F900B542CF /* CoreBluetooth.framework in Frameworks */,
+				9F83450D180296F300B542CF /* CoreLocation.framework in Frameworks */,
+				9F8344D7180296C800B542CF /* CoreGraphics.framework in Frameworks */,
+				9F8344D9180296C800B542CF /* UIKit.framework in Frameworks */,
+				9F8344D5180296C800B542CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8344F2180296C900B542CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8344F7180296C900B542CF /* XCTest.framework in Frameworks */,
+				9F8344F9180296C900B542CF /* UIKit.framework in Frameworks */,
+				9F8344F8180296C900B542CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F8344C8180296C800B542CF = {
+			isa = PBXGroup;
+			children = (
+				9F83451B1802A7EC00B542CF /* vendor */,
+				9F8344DA180296C800B542CF /* NearBeacon */,
+				9F8344FC180296C900B542CF /* NearBeaconTests */,
+				9F8344D3180296C800B542CF /* Frameworks */,
+				9F8344D2180296C800B542CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F8344D2180296C800B542CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F8344D1180296C800B542CF /* NearBeacon.app */,
+				9F8344F5180296C900B542CF /* NearBeaconTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F8344D3180296C800B542CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F8345161802A4F900B542CF /* CoreBluetooth.framework */,
+				9F83450C180296F300B542CF /* CoreLocation.framework */,
+				9F8344D4180296C800B542CF /* Foundation.framework */,
+				9F8344D6180296C800B542CF /* CoreGraphics.framework */,
+				9F8344D8180296C800B542CF /* UIKit.framework */,
+				9F8344F6180296C900B542CF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F8344DA180296C800B542CF /* NearBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				9F83451218029C3D00B542CF /* Manager */,
+				9F83450E1802970600B542CF /* ViewControllers */,
+				9F8344E3180296C800B542CF /* AppDelegate.h */,
+				9F8344E4180296C800B542CF /* AppDelegate.m */,
+				9F8344EF180296C900B542CF /* Images.xcassets */,
+				9F8344DB180296C800B542CF /* Supporting Files */,
+			);
+			path = NearBeacon;
+			sourceTree = "<group>";
+		};
+		9F8344DB180296C800B542CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F8344DC180296C800B542CF /* NearBeacon-Info.plist */,
+				9F8344DD180296C800B542CF /* InfoPlist.strings */,
+				9F8344E0180296C800B542CF /* main.m */,
+				9F8344E2180296C800B542CF /* NearBeacon-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F8344FC180296C900B542CF /* NearBeaconTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F834502180296C900B542CF /* NearBeaconTests.m */,
+				9F8344FD180296C900B542CF /* Supporting Files */,
+			);
+			path = NearBeaconTests;
+			sourceTree = "<group>";
+		};
+		9F8344FD180296C900B542CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F8344FE180296C900B542CF /* NearBeaconTests-Info.plist */,
+				9F8344FF180296C900B542CF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F83450E1802970600B542CF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F83450F1802972500B542CF /* MainViewController.h */,
+				9F8345101802972500B542CF /* MainViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9F83451218029C3D00B542CF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9F83451318029C5C00B542CF /* PMBeaconLocationManager.h */,
+				9F83451418029C5C00B542CF /* PMBeaconLocationManager.m */,
+				9F8345181802A50C00B542CF /* LocalNotificationManager.h */,
+				9F8345191802A50C00B542CF /* LocalNotificationManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		9F83451B1802A7EC00B542CF /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				9F83451C1802A7EC00B542CF /* SVProgressHUD */,
+			);
+			path = vendor;
+			sourceTree = SOURCE_ROOT;
+		};
+		9F83451C1802A7EC00B542CF /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9F8345311802A7EC00B542CF /* SVProgressHUD */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		9F8345311802A7EC00B542CF /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9F8345321802A7EC00B542CF /* SVProgressHUD-Prefix.pch */,
+				9F8345331802A7EC00B542CF /* SVProgressHUD.bundle */,
+				9F8345341802A7EC00B542CF /* SVProgressHUD.h */,
+				9F8345351802A7EC00B542CF /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F8344D0180296C800B542CF /* NearBeacon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F834506180296C900B542CF /* Build configuration list for PBXNativeTarget "NearBeacon" */;
+			buildPhases = (
+				9F8344CD180296C800B542CF /* Sources */,
+				9F8344CE180296C800B542CF /* Frameworks */,
+				9F8344CF180296C800B542CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NearBeacon;
+			productName = NearBeacon;
+			productReference = 9F8344D1180296C800B542CF /* NearBeacon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F8344F4180296C900B542CF /* NearBeaconTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F834509180296C900B542CF /* Build configuration list for PBXNativeTarget "NearBeaconTests" */;
+			buildPhases = (
+				9F8344F1180296C900B542CF /* Sources */,
+				9F8344F2180296C900B542CF /* Frameworks */,
+				9F8344F3180296C900B542CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F8344FB180296C900B542CF /* PBXTargetDependency */,
+			);
+			name = NearBeaconTests;
+			productName = NearBeaconTests;
+			productReference = 9F8344F5180296C900B542CF /* NearBeaconTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F8344C9180296C800B542CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "井上 卓";
+				TargetAttributes = {
+					9F8344D0180296C800B542CF = {
+						DevelopmentTeam = QHEHBY9GA4;
+					};
+					9F8344F4180296C900B542CF = {
+						TestTargetID = 9F8344D0180296C800B542CF;
+					};
+				};
+			};
+			buildConfigurationList = 9F8344CC180296C800B542CF /* Build configuration list for PBXProject "NearBeacon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F8344C8180296C800B542CF;
+			productRefGroup = 9F8344D2180296C800B542CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F8344D0180296C800B542CF /* NearBeacon */,
+				9F8344F4180296C900B542CF /* NearBeaconTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F8344CF180296C800B542CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F8344F0180296C900B542CF /* Images.xcassets in Resources */,
+				9F8344DF180296C800B542CF /* InfoPlist.strings in Resources */,
+				9F8345451802A7EC00B542CF /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8344F3180296C900B542CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F834501180296C900B542CF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F8344CD180296C800B542CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F83451A1802A50C00B542CF /* LocalNotificationManager.m in Sources */,
+				9F8344E5180296C800B542CF /* AppDelegate.m in Sources */,
+				9F83451518029C5C00B542CF /* PMBeaconLocationManager.m in Sources */,
+				9F8345461802A7EC00B542CF /* SVProgressHUD.m in Sources */,
+				9F8345111802972500B542CF /* MainViewController.m in Sources */,
+				9F8344E1180296C800B542CF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8344F1180296C900B542CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F834503180296C900B542CF /* NearBeaconTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F8344FB180296C900B542CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F8344D0180296C800B542CF /* NearBeacon */;
+			targetProxy = 9F8344FA180296C900B542CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F8344DD180296C800B542CF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F8344DE180296C800B542CF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9F8344FF180296C900B542CF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F834500180296C900B542CF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F834504180296C900B542CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9F834505180296C900B542CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F834507180296C900B542CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NearBeacon/NearBeacon-Prefix.pch";
+				INFOPLIST_FILE = "NearBeacon/NearBeacon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9F834508180296C900B542CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NearBeacon/NearBeacon-Prefix.pch";
+				INFOPLIST_FILE = "NearBeacon/NearBeacon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9F83450A180296C900B542CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NearBeacon.app/NearBeacon";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NearBeacon/NearBeacon-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NearBeaconTests/NearBeaconTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9F83450B180296C900B542CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NearBeacon.app/NearBeacon";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NearBeacon/NearBeacon-Prefix.pch";
+				INFOPLIST_FILE = "NearBeaconTests/NearBeaconTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F8344CC180296C800B542CF /* Build configuration list for PBXProject "NearBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F834504180296C900B542CF /* Debug */,
+				9F834505180296C900B542CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F834506180296C900B542CF /* Build configuration list for PBXNativeTarget "NearBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F834507180296C900B542CF /* Debug */,
+				9F834508180296C900B542CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F834509180296C900B542CF /* Build configuration list for PBXNativeTarget "NearBeaconTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F83450A180296C900B542CF /* Debug */,
+				9F83450B180296C900B542CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F8344C9180296C800B542CF /* Project object */;
+}

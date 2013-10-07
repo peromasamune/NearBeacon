@@ -1,0 +1,3 @@
+[submodule "vendor/SVProgressHUD"]
+	path = vendor/SVProgressHUD
+	url = git@github.com:samvermette/SVProgressHUD.git
