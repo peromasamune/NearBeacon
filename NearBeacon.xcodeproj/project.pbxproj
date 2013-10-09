@@ -266,6 +266,11 @@
 				TargetAttributes = {
 					9F8344D0180296C800B542CF = {
 						DevelopmentTeam = QHEHBY9GA4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					9F8344F4180296C900B542CF = {
 						TestTargetID = 9F8344D0180296C800B542CF;
@@ -529,6 +534,7 @@
 				9F834508180296C900B542CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F834509180296C900B542CF /* Build configuration list for PBXNativeTarget "NearBeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +543,7 @@
 				9F83450B180296C900B542CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
