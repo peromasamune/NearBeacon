@@ -91,6 +91,8 @@
 //Beaconの監視用メソッド群
 
 -(void)startMonitoring{
+    
+    NSLog(@"%s",__func__);
 
     if (self.isMonitoring == YES) {
         return;
@@ -104,6 +106,7 @@
     
     //CLBeaconRegionを生成し、Beaconによる領域観測を開始
     CLBeaconRegion *beacon = [[CLBeaconRegion alloc] initWithProximityUUID:self.proximityUUID identifier:BECON_IDENTIFIER];
+    beacon.notifyEntryStateOnDisplay = YES;
     [self.locationManager startMonitoringForRegion:beacon];
     
     self.isMonitoring = YES;
@@ -112,6 +115,8 @@
 }
 
 -(void)stopMonitoring{
+    
+    NSLog(@"%s",__func__);
     
     if (self.isMonitoring == NO) {
         return;
@@ -144,6 +149,8 @@
 
 -(void)startAdvertising{
     
+    NSLog(@"%s",__func__);
+    
     if (self.isAdvertising == YES) {
         return;
     }
@@ -168,11 +175,13 @@
 
 -(void)stopAdvertising{
     
+    NSLog(@"%s",__func__);
+    
     if (self.isAdvertising == NO) {
         return;
     }
     
-    [self.peripheralManager removeAllServices];
+    [self.peripheralManager stopAdvertising];
     self.isAdvertising = NO;
     [SVProgressHUD showSuccessWithStatus:@"Stop advertising"];
 }
@@ -181,6 +190,8 @@
 
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
     //領域内に侵入した際にコールされる
+    
+    NSLog(@"%s",__func__);
     
     [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"didEnterRegion : %@",region.identifier] block:^(BOOL succeeded) {
         
@@ -195,6 +206,8 @@
 -(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region{
     //領域内から退出した際にコールされる
     
+    NSLog(@"%s",__func__);
+    
     [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"didExitRegion : %@",region.identifier] block:^(BOOL succeeded) {
         
     }];
@@ -207,6 +220,8 @@
 
 //Beaconの距離の測定を開始すると定期的にイベントが呼ばれる
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region{
+    
+    NSLog(@"%s",__func__);
     
     for (CLBeacon *beacon in beacons){
         
@@ -237,13 +252,34 @@
     }
 }
 
+-(void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region{
+    NSLog(@"%s",__func__);
+    
+    /*
+     * Keep monitoring in background
+     * Source : http://stackoverflow.com/questions/19141779/ranging-beacons-only-works-when-app-running/19152814#19152814
+     */
+    
+    if (state == CLRegionStateInside) {
+        [manager startRangingBeaconsInRegion:(CLBeaconRegion *) region];
+    }else{
+        [manager stopRangingBeaconsInRegion:(CLBeaconRegion *) region];
+    }
+}
+
+#pragma mark -- CBPeripheralManagerDelegate --
+
 -(void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral error:(NSError *)error{
+    NSLog(@"%s",__func__);
+    
     [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"DidStartAdvertising : %@",[peripheral description]] block:^(BOOL succeeded) {
         
     }];
 }
 
 -(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral{
+    NSLog(@"%s",__func__);
+    
     [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"DidUpdateState : %@",[peripheral description]] block:^(BOOL succeeded) {
         
     }];
