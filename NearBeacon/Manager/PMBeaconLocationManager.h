@@ -10,17 +10,25 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
+@protocol PMBeaconLocationmanagerDelegate;
 @interface PMBeaconLocationManager : NSObject <CLLocationManagerDelegate, CBPeripheralManagerDelegate>
 
 +(PMBeaconLocationManager *)sharedManager;
 
--(void)startMonitoring;
--(void)stopMonitoring;
+-(BOOL)startMonitoring;
+-(BOOL)stopMonitoring;
 
--(void)startAdvertising;
--(void)stopAdvertising;
+-(BOOL)startAdvertising;
+-(BOOL)stopAdvertising;
 
 @property (nonatomic) BOOL isMonitoring;
 @property (nonatomic) BOOL isAdvertising;
+@property (nonatomic, weak) id<PMBeaconLocationmanagerDelegate> delegate;
 
+@end
+
+@protocol PMBeaconLocationmanagerDelegate <NSObject>
+@optional
+-(void)PMBeaconLocationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region;
+-(void)PMBeaconLocationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region;
 @end
