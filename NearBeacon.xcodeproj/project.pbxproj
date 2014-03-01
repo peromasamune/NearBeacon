@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303BE57B18C2884700226121 /* UserDefaultsUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE57A18C2884700226121 /* UserDefaultsUtility.m */; };
 		9F8344D5180296C800B542CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D4180296C800B542CF /* Foundation.framework */; };
 		9F8344D7180296C800B542CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D6180296C800B542CF /* CoreGraphics.framework */; };
 		9F8344D9180296C800B542CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D8180296C800B542CF /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		303BE57918C2884700226121 /* UserDefaultsUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsUtility.h; sourceTree = "<group>"; };
+		303BE57A18C2884700226121 /* UserDefaultsUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsUtility.m; sourceTree = "<group>"; };
 		9F8344D1180296C800B542CF /* NearBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8344D4180296C800B542CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9F8344D6180296C800B542CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303BE57818C2884700226121 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				303BE57918C2884700226121 /* UserDefaultsUtility.h */,
+				303BE57A18C2884700226121 /* UserDefaultsUtility.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		9F8344C8180296C800B542CF = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +143,7 @@
 		9F8344DA180296C800B542CF /* NearBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				303BE57818C2884700226121 /* Utility */,
 				9F83451218029C3D00B542CF /* Manager */,
 				9F83450E1802970600B542CF /* ViewControllers */,
 				9F8344E3180296C800B542CF /* AppDelegate.h */,
@@ -326,6 +339,7 @@
 				9F8344E5180296C800B542CF /* AppDelegate.m in Sources */,
 				9F83451518029C5C00B542CF /* PMBeaconLocationManager.m in Sources */,
 				9F8345461802A7EC00B542CF /* SVProgressHUD.m in Sources */,
+				303BE57B18C2884700226121 /* UserDefaultsUtility.m in Sources */,
 				9F8345111802972500B542CF /* MainViewController.m in Sources */,
 				9F8344E1180296C800B542CF /* main.m in Sources */,
 			);
