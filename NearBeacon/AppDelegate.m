@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "BeaconStatusListViewController.h"
 
 @implementation AppDelegate
 
@@ -20,7 +21,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MainViewController *viewController = [[MainViewController alloc] init];
+    //MainViewController *viewController = [[MainViewController alloc] init];
+    BeaconStatusListViewController *viewController = [BeaconStatusListViewController new];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
     self.window.rootViewController = navigatioController_;

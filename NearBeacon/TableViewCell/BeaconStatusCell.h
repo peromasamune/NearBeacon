@@ -10,4 +10,10 @@
 
 @interface BeaconStatusCell : UITableViewCell
 
+@property (nonatomic) UILabel *titleLabel;
+@property (nonatomic) UILabel *majorLabel;
+@property (nonatomic) UILabel *minorLabel;
+@property (nonatomic) UILabel *accuracyLabel;
+@property (nonatomic) UILabel *rssiLabel;
+
 @end

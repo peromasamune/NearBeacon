@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		303BE57B18C2884700226121 /* UserDefaultsUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE57A18C2884700226121 /* UserDefaultsUtility.m */; };
+		303BE57E18C28DC300226121 /* BeaconStatusListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE57D18C28DC300226121 /* BeaconStatusListViewController.m */; };
+		303BE58218C28FDC00226121 /* BeaconStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE58118C28FDC00226121 /* BeaconStatusCell.m */; };
+		303BE58518C295C100226121 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE58418C295C000226121 /* SwitchCell.m */; };
 		9F8344D5180296C800B542CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D4180296C800B542CF /* Foundation.framework */; };
 		9F8344D7180296C800B542CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D6180296C800B542CF /* CoreGraphics.framework */; };
 		9F8344D9180296C800B542CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D8180296C800B542CF /* UIKit.framework */; };
@@ -42,6 +45,12 @@
 /* Begin PBXFileReference section */
 		303BE57918C2884700226121 /* UserDefaultsUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsUtility.h; sourceTree = "<group>"; };
 		303BE57A18C2884700226121 /* UserDefaultsUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsUtility.m; sourceTree = "<group>"; };
+		303BE57C18C28DC300226121 /* BeaconStatusListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconStatusListViewController.h; path = ViewControllers/BeaconStatusListViewController.h; sourceTree = "<group>"; };
+		303BE57D18C28DC300226121 /* BeaconStatusListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconStatusListViewController.m; path = ViewControllers/BeaconStatusListViewController.m; sourceTree = "<group>"; };
+		303BE58018C28FDC00226121 /* BeaconStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconStatusCell.h; path = TableViewCell/BeaconStatusCell.h; sourceTree = "<group>"; };
+		303BE58118C28FDC00226121 /* BeaconStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconStatusCell.m; path = TableViewCell/BeaconStatusCell.m; sourceTree = "<group>"; };
+		303BE58318C295C000226121 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = TableViewCell/SwitchCell.h; sourceTree = "<group>"; };
+		303BE58418C295C000226121 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = TableViewCell/SwitchCell.m; sourceTree = "<group>"; };
 		9F8344D1180296C800B542CF /* NearBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8344D4180296C800B542CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9F8344D6180296C800B542CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,6 +116,17 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		303BE57F18C28FB900226121 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				303BE58318C295C000226121 /* SwitchCell.h */,
+				303BE58418C295C000226121 /* SwitchCell.m */,
+				303BE58018C28FDC00226121 /* BeaconStatusCell.h */,
+				303BE58118C28FDC00226121 /* BeaconStatusCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		9F8344C8180296C800B542CF = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +163,7 @@
 		9F8344DA180296C800B542CF /* NearBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				303BE57F18C28FB900226121 /* TableViewCell */,
 				303BE57818C2884700226121 /* Utility */,
 				9F83451218029C3D00B542CF /* Manager */,
 				9F83450E1802970600B542CF /* ViewControllers */,
@@ -188,6 +209,8 @@
 			children = (
 				9F83450F1802972500B542CF /* MainViewController.h */,
 				9F8345101802972500B542CF /* MainViewController.m */,
+				303BE57C18C28DC300226121 /* BeaconStatusListViewController.h */,
+				303BE57D18C28DC300226121 /* BeaconStatusListViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -339,9 +362,12 @@
 				9F8344E5180296C800B542CF /* AppDelegate.m in Sources */,
 				9F83451518029C5C00B542CF /* PMBeaconLocationManager.m in Sources */,
 				9F8345461802A7EC00B542CF /* SVProgressHUD.m in Sources */,
+				303BE57E18C28DC300226121 /* BeaconStatusListViewController.m in Sources */,
+				303BE58218C28FDC00226121 /* BeaconStatusCell.m in Sources */,
 				303BE57B18C2884700226121 /* UserDefaultsUtility.m in Sources */,
 				9F8345111802972500B542CF /* MainViewController.m in Sources */,
 				9F8344E1180296C800B542CF /* main.m in Sources */,
+				303BE58518C295C100226121 /* SwitchCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
