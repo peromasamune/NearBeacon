@@ -40,7 +40,7 @@
     CGRect contentViewRect = self.contentView.frame;
     contentViewRect.origin.x = offset;
     contentViewRect.origin.y = offset;
-    contentViewRect.size.width -= offset;
+    contentViewRect.size.width -= offset*2;
     
     UIView *contentOffsetView = [UIView new];
     contentOffsetView.backgroundColor = [UIColor clearColor];

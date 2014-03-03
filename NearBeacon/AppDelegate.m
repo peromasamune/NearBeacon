@@ -19,6 +19,13 @@
 {
     // Override point for customization after application launch.
     
+    [[UINavigationBar appearance] setBarTintColor:[UIColor darkGrayColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [UserDefaultsUtility initializeUserDefault];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     //MainViewController *viewController = [[MainViewController alloc] init];
