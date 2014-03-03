@@ -35,7 +35,7 @@
 +(void)setLocalNotificationWithMessage:(NSString *)message fireDate:(NSDate *)date isNowFile:(BOOL)isNow block:(SetLocalNotificationBlock)block{
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
     if (localNotification == nil) {
-        block(NO);
+        if (block) block(NO);
         return;
     }
     
@@ -61,7 +61,7 @@
     
     NSLog(@"Set LocalNotification %@ : %@",date,message);
     
-    block(YES);
+    if (block) block(YES);
 }
 
 +(void)deleteLocalNotificationWithMessage:(NSString *)message fireDate:(NSDate *)date{
