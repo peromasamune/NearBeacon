@@ -17,7 +17,7 @@
 +(void)initializeUserDefault{
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setValue:@"jp.co.yumemi" forKey:DEFAULTS_BEACON_ADVERTISING_IDENTIFIER];
-    [dic setValue:@"887B3993-B1AD-48F8-968D-B27705B8CEE7" forKey:DEFAULTS_BEACON_UUID];
+    [dic setValue:@"00000000-04B1-1001-B000-001C4D153904" forKey:DEFAULTS_BEACON_UUID];
     [dic setValue:[NSNumber numberWithInteger:0] forKey:@"default_store_unlock_ad"];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:dic];
