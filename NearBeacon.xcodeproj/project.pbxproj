@@ -11,6 +11,7 @@
 		303BE57E18C28DC300226121 /* BeaconStatusListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE57D18C28DC300226121 /* BeaconStatusListViewController.m */; };
 		303BE58218C28FDC00226121 /* BeaconStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE58118C28FDC00226121 /* BeaconStatusCell.m */; };
 		303BE58518C295C100226121 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE58418C295C000226121 /* SwitchCell.m */; };
+		303BE58818C45A2F00226121 /* PMLogUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 303BE58718C45A2F00226121 /* PMLogUtility.m */; };
 		9F8344D5180296C800B542CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D4180296C800B542CF /* Foundation.framework */; };
 		9F8344D7180296C800B542CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D6180296C800B542CF /* CoreGraphics.framework */; };
 		9F8344D9180296C800B542CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8344D8180296C800B542CF /* UIKit.framework */; };
@@ -51,6 +52,8 @@
 		303BE58118C28FDC00226121 /* BeaconStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconStatusCell.m; path = TableViewCell/BeaconStatusCell.m; sourceTree = "<group>"; };
 		303BE58318C295C000226121 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = TableViewCell/SwitchCell.h; sourceTree = "<group>"; };
 		303BE58418C295C000226121 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = TableViewCell/SwitchCell.m; sourceTree = "<group>"; };
+		303BE58618C45A2F00226121 /* PMLogUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMLogUtility.h; sourceTree = "<group>"; };
+		303BE58718C45A2F00226121 /* PMLogUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMLogUtility.m; sourceTree = "<group>"; };
 		9F8344D1180296C800B542CF /* NearBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8344D4180296C800B542CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9F8344D6180296C800B542CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +115,8 @@
 			children = (
 				303BE57918C2884700226121 /* UserDefaultsUtility.h */,
 				303BE57A18C2884700226121 /* UserDefaultsUtility.m */,
+				303BE58618C45A2F00226121 /* PMLogUtility.h */,
+				303BE58718C45A2F00226121 /* PMLogUtility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F83451A1802A50C00B542CF /* LocalNotificationManager.m in Sources */,
+				303BE58818C45A2F00226121 /* PMLogUtility.m in Sources */,
 				9F8344E5180296C800B542CF /* AppDelegate.m in Sources */,
 				9F83451518029C5C00B542CF /* PMBeaconLocationManager.m in Sources */,
 				9F8345461802A7EC00B542CF /* SVProgressHUD.m in Sources */,
