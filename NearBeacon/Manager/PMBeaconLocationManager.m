@@ -85,6 +85,18 @@
     return manager;
 }
 
+#pragma mark -- Private Method --
+
+-(void)postLocalNotificationWithMessage:(NSString *)message{
+    
+    UIApplicationState applicationState = [[UIApplication sharedApplication] applicationState];
+    
+    //アプリの状態がアクティブ以外の場合に通知を行う
+    if (applicationState != UIApplicationStateActive) {
+        [LocalNotificationManager setLocalNotificationFileNow:message block:nil];
+    }
+}
+
 #pragma mark -- Class Method --
 #pragma mark Monitoring Methods
 
@@ -202,9 +214,7 @@
     
     NSLog(@"%s",__func__);
     
-    [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"didEnterRegion : %@",region.identifier] block:^(BOOL succeeded) {
-        
-    }];
+    [self postLocalNotificationWithMessage:[NSString stringWithFormat:@"didEnterRegion : %@",region.identifier]];
     
     //Beaconの距離測定を開始する
     if ([region isMemberOfClass:[CLBeaconRegion class]] && [CLLocationManager isRangingAvailable]) {
@@ -217,9 +227,7 @@
     
     NSLog(@"%s",__func__);
     
-    [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"didExitRegion : %@",region.identifier] block:^(BOOL succeeded) {
-        
-    }];
+    [self postLocalNotificationWithMessage:[NSString stringWithFormat:@"didExitRegion : %@",region.identifier]];
     
     //Beaconの距離測定を終了する
     if ([region isMemberOfClass:[CLBeaconRegion class]] && [CLLocationManager isRangingAvailable]) {
@@ -252,12 +260,10 @@
                 break;
         }
         
-        rangeMessage = [NSString stringWithFormat:@"major:%@, minor:%@, accuracy:%f, rssi:%d",
-                        beacon.major, beacon.minor, beacon.accuracy, beacon.rssi];
+        rangeMessage = [NSString stringWithFormat:@"major:%@, minor:%@, accuracy:%f, rssi:%ld",
+                        beacon.major, beacon.minor, beacon.accuracy, (long)beacon.rssi];
         
-        [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"didRangeBeacons : %@",rangeMessage] block:^(BOOL succeeded) {
-            
-        }];
+        [self postLocalNotificationWithMessage:[NSString stringWithFormat:@"didRangeBeacons : %@",rangeMessage]];
     }
     
     [self.delegate PMBeaconLocationManager:manager didRangeBeacons:beacons inRegion:region];
@@ -286,17 +292,13 @@
 -(void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral error:(NSError *)error{
     NSLog(@"%s",__func__);
     
-    [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"DidStartAdvertising : %@",[peripheral description]] block:^(BOOL succeeded) {
-        
-    }];
+    [self postLocalNotificationWithMessage:[NSString stringWithFormat:@"DidStartAdvertising : %@",[peripheral description]]];
 }
 
 -(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral{
     NSLog(@"%s",__func__);
     
-    [LocalNotificationManager setLocalNotificationFileNow:[NSString stringWithFormat:@"DidUpdateState : %@",[peripheral description]] block:^(BOOL succeeded) {
-        
-    }];
+    [self postLocalNotificationWithMessage:[NSString stringWithFormat:@"DidUpdateState : %@",[peripheral description]]];
 }
 
 @end
